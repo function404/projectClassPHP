@@ -87,45 +87,43 @@
         </div>
     </nav>
 
-<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
-
+    <div class="container">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
             <h1 class="titulo-txt">Cadastro de Produtos</h1>
-        <fieldset>
-            <div class="div-form">
-                <label for="nome"></label>
-                <input class="input-login" type="text" name="nome" placeholder="Nome" value=<?php echo $nome?>>
-                <span class="obrigatorio">*</span>
-            </div>
+            <fieldset>
+                <div class="div-form">
+                    <label for="nome"></label>
+                    <input class="input-login" type="text" name="nome" placeholder="Nome" value=<?php echo $nome?>>
+                    <span class="obrigatorio">*</span>
+                </div>
+                <div class="div-form">
+                    <label for="descricao"></label>
+                    <input class="input-login" type="text" name="descricao" placeholder="Descrição" value=<?php echo $descricao?>>
+                    <span class="obrigatorio">*</span>
+                </div>
 
-            <div class="div-form">
-                <label for="descricao"></label>
-                <input class="input-login" type="text" name="descricao" placeholder="Descrição" value=<?php echo $descricao?>>
-                <span class="obrigatorio">*</span>
-            </div>
+                <div class="div-form">
+                    <label for="valor"></label>
+                    <input class="input-login" type="number" name="valor" placeholder="Valor" value=<?php echo $valor?>>
+                    <span class="obrigatorio">*</span>
+                </div>
 
-            <div class="div-form">
-                <label for="valor"></label>
-                <input class="input-login" type="number" name="valor" placeholder="Valor" value=<?php echo $valor?>>
-                <span class="obrigatorio">*</span>
-            </div>
+                <div class="div-form">
+                    <label class="label-image" for="img">Selecione uma imagem</label>
+                    <input type="file" name="image" id='img'>
+                    <span class="obrigatorio">*</span>
+                </div>
 
-            <div class="div-form">
-                <label class="label-image" for="img">Selecione uma imagem</label>
-                <input type="file" name="image" id='img'>
-                <span class="obrigatorio">*</span>
-            </div>
+                <div class="div-form">        
+                    <input class="button-form" type="submit" value="Enviar" name='submit'>
+                </div>
 
-            <div class="div-form">        
-                <input class="button-form" type="submit" value="Enviar" name='submit'>
-            </div>
-
-            <div class="div-form">        
-                <a class="button-log" href="../produto/listproduto.php">Ver lista de produtos</a>
-            </div>
-
-        </fieldset>
-    
-</form>
+                <div class="div-form">        
+                    <a class="button-log" href="../produto/listproduto.php">Ver lista de produtos</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-info logo">

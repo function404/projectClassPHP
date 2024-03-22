@@ -30,15 +30,17 @@
         </div>
     </nav>
 
-    <div class="user">
-        <img class="userr" src="../img/user-solid.svg" alt="err">
-    </div>
+    <div class="container">
+        <div class="user">
+            <img class="userr" src="../img/user-solid.svg" alt="err">
+        </div>
 
-    <h1 class="txt-prin">
-        Olá seja bem-vindo(a) <?php echo $_SESSION['nome']?> <br>
-        <?php if ($_SESSION['administrador']==1) echo "Você é administrador";  else echo "não tem permissão para acessar aos usuários!";?>
-    </h1>
-    <br>
+        <h1 class="txt-prin">
+            Olá seja bem-vindo(a) <?php echo $_SESSION['nome']?> <br>
+            <?php if ($_SESSION['administrador']==1) echo "Você é administrador";  else echo "Você não é administrador!";?>
+        </h1>
+        <br>
+    </div>
     
     <footer class="footer">
         <div class="footer-container">

@@ -69,33 +69,35 @@
             </ul>
         </div>
     </nav>
-<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
+    <div class="container">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <h1 class="titulo-txt">Login</h1>
-        <fieldset>
-            <div class="div-form">
-                <label for="email"></label>
-                <input class="input-login" type="text" name="email" placeholder="Email" value=<?php echo $email?>>
-                <span class="obrigatorio">* <?php echo $emailErr ?></span>
-            </div>
+            <fieldset>
+                <div class="div-form">
+                    <label for="email"></label>
+                    <input class="input-login" type="text" name="email" placeholder="Email" value=<?php echo $email?>>
+                    <span class="obrigatorio">* <?php echo $emailErr ?></span>
+                </div>
 
-            <div class="div-form">
-                <label for="senha"></label>
-                <input class="input-login" type="password" name="senha" placeholder="Senha" value=<?php echo $senha?>>
-                <span class="obrigatorio">* <?php echo $senhaErr ?></span>
-            </div>
+                <div class="div-form">
+                    <label for="senha"></label>
+                    <input class="input-login" type="password" name="senha" placeholder="Senha" value=<?php echo $senha?>>
+                    <span class="obrigatorio">* <?php echo $senhaErr ?></span>
+                </div>
 
-            <div class="div-form">        
-                <input class="button-form" type="submit" value="Entrar">
-            </div>
+                <div class="div-form">        
+                    <input class="button-form" type="submit" value="Entrar">
+                </div>
 
-            <div class="div-form">
-                <a class="button-log" href="../paginas/cadUsuario.php">Cadastre-se aqui!</a>
-            </div>
-        </fieldset>
-    
-</form>
-<footer class="footer">
+                <div class="div-form">
+                    <a class="button-log" href="../paginas/cadUsuario.php">Cadastre-se aqui!</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-info logo">
                 <a href="#">

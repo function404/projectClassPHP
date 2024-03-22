@@ -25,43 +25,46 @@
             </ul>
         </div>
     </nav>    
-    <?php
-    include '../include/MySql.php';
 
-    $sql = $pdo->prepare("SELECT * FROM usuario");
-    if ($sql->execute()){
-        $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    <div class="container">]
+        <?php
+            include '../include/MySql.php';
 
-        echo "<center>";
-        echo "<table style='padding: 20px;' border='1'>";
-        echo "<tr>";
-        echo " <th class='tab' >Código</th>";
-        echo " <th class='tab' >Nome</th>";
-        echo " <th class='tab' >Email</th>";
-        echo " <th class='tab' >Telefone</th>";
-        echo " <th class='tab' >Senha</th>";
-        echo " <th class='tab' >Administrador</th>";
-        echo " <th class='tab' >Alterar</th>";
-        echo " <th class='tab' >Excluir</th>";
-        echo " </tr>";
+            $sql = $pdo->prepare("SELECT * FROM usuario");
+            if ($sql->execute()){
+                $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach($info as $key => $value){
-            echo "<tr>";
-            echo "<td class='tab' style='padding: 7px;'>  ".$value['codigo']."</td>";
-            echo "<td class='tab' style='padding: 7px;'>  ".$value['nome']."</td>";
-            echo "<td class='tab' style='padding: 7px;'>  ".$value['email']."</td>";
-            echo "<td class='tab' style='padding: 7px;'>  ".$value['telefone']."</td>";
-            echo "<td class='tab' style='padding: 7px;'>  ".$value['senha']."</td>";
-            echo "<td class='tab' style='padding: 7px;'> ".$value['administrador']."</td>";
-            echo "<td class='tab' style='padding: 7px;'><center><a style='text-decoration: none; color: green;' href='altUsuario.php?codigo=".$value['codigo']."'><i class='fa-solid fa-circle-up'></i></a></center></td>";
-            echo "<td class='tab' style='padding: 7px;'><center><a style='text-decoration: none; color: red;' href='delUsuario.php?codigo=".$value['codigo']."'><i class='fa-solid fa-circle-xmark'></i></a></center></td>";
-            echo "</tr>";
-            echo "</center>";
-        }
+                echo "<center>";
+                echo "<table style='padding: 20px;' border='1'>";
+                echo "<tr>";
+                echo " <th class='tab' >Código</th>";
+                echo " <th class='tab' >Nome</th>";
+                echo " <th class='tab' >Email</th>";
+                echo " <th class='tab' >Telefone</th>";
+                echo " <th class='tab' >Senha</th>";
+                echo " <th class='tab' >Administrador</th>";
+                echo " <th class='tab' >Alterar</th>";
+                echo " <th class='tab' >Excluir</th>";
+                echo " </tr>";
 
-        echo "</table>";
-    };
-?>
+                foreach($info as $key => $value){
+                    echo "<tr>";
+                    echo "<td class='tab' style='padding: 7px;'>  ".$value['codigo']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'>  ".$value['nome']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'>  ".$value['email']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'>  ".$value['telefone']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'>  ".$value['senha']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'> ".$value['administrador']."</td>";
+                    echo "<td class='tab' style='padding: 7px;'><center><a style='text-decoration: none; color: green;' href='altUsuario.php?codigo=".$value['codigo']."'><i class='fa-solid fa-circle-up'></i></a></center></td>";
+                    echo "<td class='tab' style='padding: 7px;'><center><a style='text-decoration: none; color: red;' href='delUsuario.php?codigo=".$value['codigo']."'><i class='fa-solid fa-circle-xmark'></i></a></center></td>";
+                    echo "</tr>";
+                    echo "</center>";
+                }
+
+                echo "</table>";
+            };
+        ?>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
