@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-body: rgba(47, 85, 164, 0.7);
+
+    --color-primary: rgba(255, 145, 0, 0.9);
+    --color-secondary: rgba(47, 85, 164, 0.9);
+    --color-tertiary: rgb(255, 145, 0);
+
+    --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
+
+}
+
+body{
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-body);
+}
+
+
+
+
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.brand-title{
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+.logo-pi{
+    margin-left: 70px;
+    width: 60px;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover{
+    width: 100%;
+    background-color: var(--color-secondary);
+}
+
+.toggle-button{
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* FORMULARIO LOGIN */
+form{
+    padding: 80px 0px 80px 0px;
+    text-align: center;
+}
+
+fieldset{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0px 40px 0px;
+    border: none;
+    background-color: var(--color-secondary);
+}
+
+.div-form{
+    padding: 10px;
+}
+
+
+.input-login{
+    padding: 8px;
+    width: 75%;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+}
+
+
+.button-form{
+    width: 10%;
+    padding: 5px;
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+}
+
+.button-form:hover{
+    background-color: var(--color-primary);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.button-log{
+    color: var(--color-primary);
+}
+
+.titulo-txt{
+    color: var(--color-tertiary);
+}
+
+.tab{
+    color: var(--color-white);
+}
+
+
+
+
+/* PRINCIPAL */
+.user{
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+}
+
+.userr{
+    width: 150px;
+    background-color: var(--color-primary);
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.txt-prin{
+    text-align: center;
+}
+
+.link-alt{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.link-alt:hover{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: .5s all ease;
+}
+
+
+
+
+
+/* ALT USUARIO*/
+
+.txt-alt{
+    color: var(--color-white);
+}
+
+.codigo p{
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.btn-altdel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+
+
+
+/* CADPRODUTO */
+.div-form input[type = 'file']{
+    display: none;
+}
+
+.label-image{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+.div-form .label-image:hover{
+    background-color: var(--color-primary);
+    transition: .4s all ease;
+}
+
+.btn-listp{
+    cursor: pointer;
+    padding: 8px;
+    width: 5%;
+    border: 1px solid var(--color-black);
+    border-radius: 12px; 
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.btn-listp:hover{
+    background-color: var(--color-primary);
+    transition: .4s all ease;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    background-color:var(--color-secondary);
+}
+
+.footer-container{
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-info{
+    margin-top: 10px;
+    color: var(--color-white);
+}
+
+
+.footer-info p a{
+    color: var(--color-primary);
+    transition: all .5s ease;
+}
+
+.footer-info p a:hover{
+    transition: all .5s ease;
+    color: var(--color-white);
+}
+
+.footer-info a i{
+    padding: 15px;
+    color: var(--color-primary);
+    border-radius: 3px;
+    transition: all .5s ease;
+    background-color: var(--color-body);
+}
+
+.footer-info a i:hover{
+    transition: all .5s ease;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.footer-info.logo a i{
+    color: var(--color-white);
+    padding: 0 auto;
+    background-color: transparent;
+    margin: 0 auto;
+    font-size: 100px;
+    transition: all .5s ease;
+}
+
+.footer-info.logo a:hover i{
+    transition: all .5s ease;
+    transform: rotate(45deg);
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+/* SCROLL */
+::-webkit-scrollbar{
+    width: 0.7rem;
+    height: 0.5rem;
+    background-color: rgba(47, 85, 164, 0.509);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(58, 100, 190);
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent ;
+}
+
+
+
+@media screen and (max-width: 960px){
+    /* NAVBAR */
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+
+    .button-form{
+        width: 40%;
+        padding: 5px;
+        border: 1px solid var(--color-black);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    table::-webkit-scrollbar{
+        overflow: auto;
+    }
+}
